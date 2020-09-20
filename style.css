@@ -1,0 +1,156 @@
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			text-decoration: none;
+			font-family: Sans-serif;
+		}
+		body{
+			background: #FFFFFF;
+		}
+		h3,h4{
+			color:#dc2405;
+			font-family: Lucida Console;
+    		padding: 10px;
+		}
+		p {
+			font-family: Lucida Console;
+    		padding: 10px;
+    		color: #383633;
+		}
+		.txt{
+			margin:10px;
+		}
+		.img{
+			text-align:center;
+		}
+		img{
+			height: 70px;
+			width: 70px;
+			padding: 0 0 5px;;
+		}
+    	.header{
+			height: auto;
+			background: #0078D7;
+			border-radius:0 0 30% 30%;
+    	}
+    	.h-menu{
+    		margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		background-color: #f6a730;
+    	}
+		.menu-items{
+			float: left;
+			width: 25%;
+			color: #fff;
+			text-align:center;
+			padding:4px 0;
+    		border-right:1px solid #bbb;
+    		cursor: pointer;
+		}
+		.menu-items:hover{
+			background: #4070fF;
+		}
+		.menu-items:last-child{
+			border-right:none;
+		}
+
+		.m-link{
+			font-size: 15px;
+			font-weight: 600;
+			color: #f6f7f6;
+		}
+		.profile{
+			padding: 10px 40px;
+			color:#f6f7f6;
+		}
+		.profile p{
+			color: azure;
+		}
+		.withdraw{
+			padding: 40px 20px;
+		}	
+		.content{
+			position: relative;
+			background:#fff;
+			min-height: 85vh;
+			padding: 10px 30px;
+		}
+		.center{
+			position: absolute;
+			top:50%;
+			left: 50%;
+			transform:translate(-50%, -50%);
+		}
+		.task{
+			box-sizing: border-box;
+			border-radius: 5px;
+			background: rgb(230, 228, 228);
+			overflow: hidden;
+			height: 300px;
+			width: 260px;
+			box-shadow: 0px 10px 10px #333333;
+		}
+		.task h3{
+			background: #ff6331;
+			color: rgb(216, 252, 230);
+			text-align: center;
+			font-size: 30px;
+		}
+		input[type=text],input[type=password],input[type=email],  select {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+		.task input, .nxt{
+			width: 96%;
+    		padding: 12px 20px;
+    		margin: 8px 2%;
+    		display: inline-block;
+    		border: 1px solid #ccc;
+    		border-radius: 4px;
+			box-sizing: border-box;
+		}
+		.task input[type=button] {
+			background-color: #4CAF50;
+			font-weight:600;
+			color:#FFB935;
+			font-size:16px;
+		}
+		.task span{
+			color: rgb(224, 15, 224);
+		}
+		.nxt{
+			background-color: #E7C246;
+		}
+		.btn{
+    		color: #ece4e4;
+    		border: 1px salid #0f0;
+   		 	background: #0761ee;
+   		 	padding: 10px 6px;
+   		 	border-radius: 4px;
+		 	border: 1px solid;
+		}
+
+		.btn-login{
+			position: absolute;
+    		bottom: 5%;
+    		left: 2%;
+		}
+		.btn-menu{
+			background: none;
+			border:none;
+			font-weight: 600;
+		}
+		.footer{
+			display: block;
+			color: #fff;
+			padding: 5px;
+			text-align: center;
+			background: #001;
+		}

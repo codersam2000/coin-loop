@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cl-withdraw</title>
+    <style>
+        .wd{ border:2px solid #0078D7; color: antiquewhite; padding:8px; text-align:center; margin:4px; background: linear-gradient(rgb(146, 3, 241), rgb(222, 5, 241)); }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="header">
+        <div class="img">
+           <img src="coinloop.png" alt="coin-lope">
+        </div>
+    </section>
+    
+    <section style="height: 80vh; padding:10px 30px; position:relative; ">
+       <div class="withdraw">
+           <span id="wmsg"></span><hr>
+           <p>1000 points = 10tk</p>
+           <p>2000 points = 25tk</p>
+           <p>5000 points = 100tk</p>
+       </div>
+        <h4>Thanks For being with us.</h4>
+        <a href="index.html" class="btn btn-login">HOME</a>
+    </section>
+    <section class="footer">
+		<p>&copy; Copyright 2020- <script>document.write(new Date().getFullYear())</script> by Refsnes Data. All Rights Reserved.</p>
+    </section>
+    
+    <script>
+        var wpoints = localStorage.getItem("adminLpoints");
+        if( wpoints >= 1000 ){
+            document.getElementById('wmsg').innerHTML= '<a href="mailto:mchonter548@gmail.com"><h3 class="wd">withdraw</h3></a>';
+        }else{
+        document.getElementById('wmsg').innerHTML= '<p style="color:#F68F55;">Earn enough points for withdraw!</p>'
+        }
+    </script>
+</body>
+</html>

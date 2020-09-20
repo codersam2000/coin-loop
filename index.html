@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>coinlope</title>
+	<style>
+	
+	#info .stt{
+		background: #fc7423;
+		border-radius: 50%;
+		height: 150px;
+		width: 150px;
+		position: relative;
+		text-align: center;
+		margin: auto;
+		border:5px solid rgb(228, 189, 167);
+		box-sizing: border-box;
+		z-index:9999;
+	}
+	
+	</style>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<section class="header">
+		<div class="h-menu">
+			<div class="menu-items">
+				<a href="profile.html" class="m-link">Profile</a>
+			</div>
+			<div class="menu-items m-link">
+				Points: <span id="fpoints">0</span>
+			</div>
+			<div class="menu-items">
+				<a href="withdraw.html" class="m-link">Withdraw</a>
+			</div>
+			<div class="menu-items">
+				<a href="#" class="m-link">Share</a>
+			</div>
+		</div>
+		<div class="img">
+			<img src="coinloop.png" alt="coin-lope">
+		</div>	
+	</section>
+	<section class="content">
+		
+		<div class="txt">
+		<h4>Hi, <span id="name"></span></h4>
+		<p>Submit capcha and earn points. It's a loop of task. After finishing your task you will get paid. You can withdrow throgh Bkash, Rocat or PayPal!</p>
+		</div>
+		<div id="info">
+			<!-- a value will include from register form -->
+		</div>
+		
+		<a href="register.html" class="btn btn-login">Login/register</a>
+	</section>
+		
+	<section class="footer">
+		<p>&copy; Copyright 2020- <script>document.write(new Date().getFullYear())</script> by Refsnes Data. All Rights Reserved.</p>
+	</section>
+	<script>
+		/*
+			1.DOM SecectItem
+			2.Event Listner
+			3.Basic Validation
+			4.Local Saorage
+			5.Set Cookis
+		*/
+		
+		const lpoints = localStorage.getItem("claimed");
+						document.getElementById('fpoints').innerHTML= lpoints;
+		const nlpoints = document.getElementById('fpoints').innerHTML;
+						localStorage.setItem("adminLpoints", nlpoints);
+
+
+		var nic = localStorage.getItem("earnBtn");
+		document.getElementById("info").innerHTML= nic;
+		
+		var nam = localStorage.getItem("ln");
+		document.getElementById("name").innerHTML = nam;
+	</script>
+</body>
+</html>

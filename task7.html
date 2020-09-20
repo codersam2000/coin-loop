@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>task7</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<section class="header">
+		<div class="img">
+		   <img src="coinloop.png" alt="coin-lope">
+		</div>
+	 </section>
+	 <h4>Fill the captcha then submit to continue.</h4>
+	<div class="content">
+		<div class="center task">
+			<div>
+			<h3>task-7/15</h3> 
+			</div>
+				<p>Captcha: <span id="captcha"></span></p>
+			<input type="number" id="field">
+			<input type="button" value="submit" onclick="check()">
+			<p><span id="nxt"></span></p>
+		</div>
+	</div>
+	
+	<section class="footer">
+		<p>&copy; Copyright 2020- <script>document.write(new Date().getFullYear())</script> by Refsnes Data. All Rights Reserved.</p>
+	</section>
+	<script>
+		const min = 1000;
+		const max = 9000;
+		var ranNum = Math.floor(Math.random() * (max - min)) + min;
+
+		document.getElementById('captcha').innerHTML = ranNum;
+		function check(){
+		var inNum =	document.getElementById('field').value;
+
+		if(ranNum == inNum){
+		document.getElementById('nxt').innerHTML = '<a href="task8.html" class="nxt"><b>Next >></b></a>';
+		}else{
+		document.getElementById('nxt').innerHTML = '<p style="color:red;"><b>Captcha not matched!</b></p>';
+		}
+		}
+	</script>
+</body>
+</html>

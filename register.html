@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>   
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Create account</title>
+   <style>
+.info{
+	display:none;
+}
+.container{
+   height: 90vh;
+   padding: 30px 10px;
+}
+input[type=submit] {
+    max-width:200px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.form{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 40px;
+    max-width: 680px;
+    margin: auto;
+}
+
+      </style>      
+     <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <section class="header">
+         <div class="img">
+            <img src="coinloop.png" alt="coin-lope">
+         </div>
+      </section>
+      <div class="container">
+         <div class="form">
+            <form action="index.html" name="myForm" method="post" onsubmit="return(validate())">
+                  <h3 style="color:gray; text-align:center;">Personal information</h3>
+                  First name:<br>
+                  <input type="text" id="fstName" name="fName"><br>
+                  Last name:<br>
+                  <input type="text" id="lstName" name="lName"><br>
+                  E-mail:<br>
+                  <input type="email" id="eml" name="email"><br>
+                  Password:<br>
+                  <input type="password" name="password"><br><br>
+                  <input onclick="validate()" type="submit" value="Submit">
+            </form>
+         </div>
+      </div>
+      <div id="intro" class="info">
+         <div class="stt">
+         <a href="task15.html" class="center"><b>Start Earning</b></a>
+         </div>
+      </div>
+      <section class="footer">
+         <p>&copy; Copyright 2020- <script>document.write(new Date().getFullYear())</script> by Refsnes Data. All Rights Reserved.</p>
+      </section>
+      
+
+
+      <script type = "text/javascript">
+	  
+      const Ebtn = document.getElementById("intro").innerHTML;
+	  localStorage.setItem("earnBtn", Ebtn);
+	  
+      function validate() {
+			const Fname = document.getElementById("fstName").value;
+	  localStorage.setItem("fn", Fname);
+	        const Lname = document.getElementById("lstName").value;
+	  localStorage.setItem("ln", Lname);
+	        const Eml = document.getElementById("eml").value;
+	  localStorage.setItem("eml", Eml);
+	  
+	  
+         if( document.myForm.fName.value == "" ) {
+            alert( "Please provide your first name!" );
+            document.myForm.fName.focus() ;
+            return false;
+         }
+          if( document.myForm.lName.value == "" ) {
+            alert( "Please provide your last name!" );
+            document.myForm.lName.focus() ;
+            return false;
+         }
+         if( document.myForm.email.value == "" ) {
+            alert( "Please provide your Email!" );
+            document.myForm.email.focus() ;
+            return false;
+         }
+         if( document.myForm.password.value == "" || isNaN( document.myForm.password.value ) || document.myForm.password.value.lenght <= 5 ){
+             alert( "Please provide a password minimum 6 char!" );
+            document.myForm.password.focus() ;
+            return false;
+         }
+         return( true );
+      }
+	  
+	  
+   </script>
+   </body>
+   </html>
+     

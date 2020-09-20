@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cl-profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="header">
+        <div class="img">
+           <img src="coinloop.png" alt="coin-lope">
+        </div>
+        <div class="profile">
+            Profile:<input type="file"><br>
+            <p>Name: <span id="fn"></span> <span id="ln"></span></p>
+            <p>Email: <span id="mail"></span></p>
+            <a href="index.html" class="btn btn-login">HOME</a>
+        </div>
+    </section>
+    <section style="height: 70vh; padding:10px 30px; ">
+       
+        <h4>Thanks For being with us.</h4>
+    </section>
+    <section class="footer">
+		<p>&copy; Copyright 2020- <script>document.write(new Date().getFullYear())</script> by Refsnes Data. All Rights Reserved.</p>
+    </section>
+    
+    <script>
+        document.getElementById('fn').innerHTML= localStorage.getItem('fn');
+        document.getElementById('ln').innerHTML= localStorage.getItem('ln');
+        document.getElementById('mail').innerHTML= localStorage.getItem('eml');
+    </script>
+</body>
+</html>
